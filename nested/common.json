@@ -4,7 +4,6 @@
   "parameters": {
     "keyVaultName": {
       "type": "string",
-      "defaultValue": "KeyVaultName",
       "metadata": {
         "description": "Name of the Key Vault"
       }
@@ -53,7 +52,6 @@
     },
     "omsWorkspaceName": {
       "type": "string",
-      "defaultValue": "OMSName",
       "metadata": {
         "description": "Provide the OMS Workspace name."
       }
