@@ -2,23 +2,6 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "keyVaultName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the Key Vault"
-      }
-    },
-    "vaultSku": {
-      "type": "string",
-      "defaultValue": "Standard",
-      "allowedValues": [
-        "Standard",
-        "Premium"
-      ],
-      "metadata": {
-        "description": "SKU for the vault"
-      }
-    },
     "enabledForDeployment": {
       "type": "bool",
       "defaultValue": true,
@@ -26,52 +9,6 @@
         "description": "Specifies if the vault is enabled for VM or Service Fabric deployment"
       }
     },
-    "enabledForTemplateDeployment": {
-      "type": "bool",
-      "defaultValue": true,
-      "metadata": {
-        "description": "Specifies if the vault is enabled for ARM template deployment"
-      }
-    },
-    "enabledForDiskEncryption": {
-      "type": "bool",
-      "defaultValue": true,
-      "metadata": {
-        "description": "Specifies if the vault is enabled for volume encryption"
-      }
-    },
-    "enableSoftDelete": {
-      "type": "bool",
-      "defaultValue": false,
-      "metadata": {
-        "description": "Specifies if the vault is enabled for soft delete"
-      }
-    },    
-    "storageAccountName": {
-      "type": "string"
-    },
-    "omsWorkspaceName": {
-      "type": "string",
-      "metadata": {
-        "description": "Provide the OMS Workspace name."
-      }
-    },
-    "tagValues": {
-      "type": "object"
-    },
-    "applicationObjectId": {
-      "type": "string"
-    },
-    "applicationClientId": {
-      "type": "string"
-    },    
-    "retentionPolicy": {
-      "type": "int",
-      "defaultValue": 2,
-      "metadata": {
-        "description": "Number of days of Retention Policy"
-      }
-    }
   },
   "variables": {
     "apiVersion": "2016-01-01"
